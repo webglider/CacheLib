@@ -156,7 +156,7 @@ int main(int argc, char** argv) {
     setupSignalHandler();
     setupTimeoutHandler();
 
-    return runnerInstance->run(std::chrono::seconds(FLAGS_progress),
+    return runnerInstance->run(std::chrono::milliseconds(FLAGS_progress),
                                FLAGS_progress_stats_file)
                ? 0
                : 1;

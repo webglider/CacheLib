@@ -42,7 +42,7 @@ class Runner {
   // @param progressStatsFile   the file to log periodic stats and progress
   //                            to in addition to stdtout. Ignored if empty
   // @return true if the run was successful, false if there is a failure.
-  bool run(std::chrono::seconds progressInterval,
+  bool run(std::chrono::milliseconds progressInterval,
            const std::string& progressStatsFile);
 
   // for testings using folly::Benchmark

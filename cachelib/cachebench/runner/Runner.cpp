@@ -25,7 +25,7 @@ Runner::Runner(const CacheBenchConfig& config)
     : stressor_{Stressor::makeStressor(config.getCacheConfig(),
                                        config.getStressorConfig())} {}
 
-bool Runner::run(std::chrono::seconds progressInterval,
+bool Runner::run(std::chrono::milliseconds progressInterval,
                  const std::string& progressStatsFile) {
   ProgressTracker tracker{*stressor_, progressStatsFile};
 
